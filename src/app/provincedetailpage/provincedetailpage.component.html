@@ -1,0 +1,37 @@
+<!-- Dalla home page cliccando su una provincia si arriverà alla pagina del dettaglio di
+essa, dove verrà mostrato il meteo per ogni 3H della giornata (es. 00:00 - 03:00 -
+06:00….). Questa pagina non avrà header.
+IMPORTANTE L’url nella barra del browser dovrà apparire nel seguente formato
+http://localost:<porta>/provincia/<nome provincia> senza alcun query parameter.
+TECNOLOGIE OBBLIGATORIE DA UTILIZZARE:
+● ANGULAR
+● GIT
+Il progetto si considera concluso quando verrà pubblicato su github, condiviso
+con noi e sufficientemente documentato per poterne effettuare l’avvio in
+autonomia.
+È considerato un plus se il progetto sarà hostato in versione demo su netlify.com
+ -->
+<router-outlet > 
+    <div class="titoloprovincia" >
+        <p class="nomeprov"> {{prov}}</p>
+   </div> 
+    <body class="contenitoreprov" >
+        <ul style="list-style-type: none" >
+            
+            <li class="lista">{{risultato[0][0].temperatura1}}° {{risultato[0][0].time1}} <img src={{risultato[0][0].icon1}}> </li>
+            <li class="lista">{{risultato[0][0].temperatura2}}° {{risultato[0][0].time2}} <img src={{risultato[0][0].icon2}}> </li>
+            <li class="lista">{{risultato[0][0].temperatura3}}° {{risultato[0][0].time3}} <img src={{risultato[0][0].icon3}}> </li>
+            <li class="lista">{{risultato[0][0].temperatura4}}° {{risultato[0][0].time4}} <img src={{risultato[0][0].icon4}}> </li>
+            <li class="lista">{{risultato[0][0].temperatura5}}° {{risultato[0][0].time5}} <img src={{risultato[0][0].icon5}}> </li>
+            <li class="lista">{{risultato[0][0].temperatura6}}° {{risultato[0][0].time6}} <img src={{risultato[0][0].icon6}}> </li>
+            <li class="lista">{{risultato[0][0].temperatura7}}° {{risultato[0][0].time7}} <img src={{risultato[0][0].icon7}}> </li>
+            <li class="lista">{{risultato[0][0].temperatura8}}° {{risultato[0][0].time8}} <img src={{risultato[0][0].icon8}}> </li>
+            <li class="lista">{{risultato[0][0].temperatura9}}° {{risultato[0][0].time9}} <img src={{risultato[0][0].icon9}}> </li>
+        </ul>
+        
+        
+    </body>
+
+
+</router-outlet>
+

@@ -1,0 +1,63 @@
+<!-- 
+1.HOME PAGE
+E’ la prima pagina che verrà visualizzata, all’interno del body ci sarà una lista di tutte
+le provincie italiane (ordinate in ordine alfabetico) con a destra di ogni item
+temperatura e icona del meteo della giornata della rispettiva provincia. Invece
+nell’header sarà presente un input search per poter ricercare la provincia e la
+possibilità di selezionare il giorno. L’header non dovrà essere scrollabile. In più si
+dovrà poter ricercare anche tramite indirizzo url. CAPIRE MEGLIO CON GIOELE QUESTO PUNTO
+ -->
+
+<!--  Controlla se da togliere -->
+<header><div class="contenitorefisso">
+  <div class="presentazione">
+        Progetto Test Candidato - WHIP 
+        <a target = a_blank href="https://www.linkedin.com/in/francesco-mucaj-2b12a1238/" >Francesco Mucaj </a>
+        </div>
+  
+<!-- contenitore per input di ricerca -->
+  <section class="top-banner">
+    <div class="container">
+      <h1 class="heading">Web-app TEST</h1>
+      <form>
+        <input type="text" [(ngModel)]="INPUTRICERCA" placeholder="Cerca provincia " autofocus name='/provincia' id="nomeprovincia" >
+        <input type='date' [(ngModel)]="INPUTDATA" placeholder='Giorno/Mese/anno'  name='datainserita' id='datetime'  />
+
+        <!-- perche non riesco tramite classe a assegnare css? -->
+        <button type="submit" (click)="INSERISCI()" [routerLink]="['provincia/',INPUTRICERCA,INPUTDATA]"  style= 'background-color:hsl(120,100%,75%);
+         border-radius: 30px;'
+         type="submit">CERCA </button>
+      </form>
+    </div>
+  </section>
+  <div class="dovetitrovitu">
+    <p>Attualmente ti trovi a :
+      <a target="a_self"> {{provinvia_client}} {{DATImeteo.current.temp_c}}°</a></p> 
+
+  </div>
+</div>
+</header>
+
+<!-- all’interno del body ci sarà una lista di tutte
+le provincie italiane (ordinate in ordine alfabetico) con a destra di ogni item
+temperatura e icona del meteo della giornata della rispettiva provincia.  -->
+
+<!-- | slice:0:20 -->
+
+ <body class="contenitoreIstanze">
+
+  <ul class="istanze">
+    <li class="istanza" *ngFor="let prov of istanze ; index as i ">
+       
+
+      <a (click)="handleMenuClick(istanze[i][0].nome)" [routerLink]="['provincia/',istanze[i][0].nome, timestamp]" > 
+        <p  class="nomeistanze"   >{{istanze[i][0].nome}}  {{istanze[i][0].temperatura}} °
+          <img class= "immagine"src="{{istanze[i][0].icon}}" >
+         </p>
+        </a>
+    </li>
+  </ul>
+
+
+</body>
+

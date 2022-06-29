@@ -1,0 +1,86 @@
+.titoloprovincia{
+    position: absolute;
+    margin-top: 5%;
+
+    margin-inline: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    height: 10%;
+    border: solid 2px gray;
+    text-align: center;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 50px;
+    background-color: lightgreen;
+
+}
+
+.nomeprov{
+  
+    margin-top: 2%;
+    font-size: 50px;
+    font-weight: bold;
+    width: auto;
+
+    margin-inline: center;
+
+    
+
+
+
+}
+.selettore{
+    position: absolute;
+    margin-top: 12%;
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: 300px;
+    border: solid 1px brown;
+    border-radius: 40px;
+    
+
+}
+.contenitoreprov{
+    background-color: whitesmoke;
+    border-top-left-radius: 300px;
+    border-top-right-radius: 300px;
+
+    border: solid 1px darkslategray;
+    margin-top: 17%;
+    width: max-content;
+    font-style: oblique;
+    height: auto;
+    width: 100%;
+
+
+    margin-inline: auto;
+}
+.lista{
+    border: solid 2px green;
+    border-radius: 100px;
+    height: 100px;
+    width: 40%;
+    margin-inline: auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    
+    text-align: center;
+    font-size: 30px;
+
+    font-weight: bold;
+    
+
+}
+img {
+    display: block;
+    margin-left: 80%;
+    margin-top: -40px;
+
+    height: 100px;
+    margin-inline: center;
+
+  }
